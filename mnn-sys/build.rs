@@ -586,8 +586,8 @@ pub fn mnn_c_bindgen(vendor: impl AsRef<Path>, out: impl AsRef<Path>) -> Result<
         })
         .clang_arg(format!("-I{}", vendor.join("include").to_string_lossy()))
         .pipe(|generator| {
-            HEADERS.iter().fold(generator, |gen, header| {
-                gen.header(mnn_c.join(header).to_string_lossy())
+            HEADERS.iter().fold(generator, |r#gen, header| {
+                r#gen.header(mnn_c.join(header).to_string_lossy())
             })
         })
         .newtype_enum("MemoryMode")
