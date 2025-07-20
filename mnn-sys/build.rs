@@ -41,7 +41,7 @@ static MNN_COMPILE: LazyLock<bool> = LazyLock::new(|| {
 });
 
 // MNN GitHub repository URL for auto-download
-static MNN_REPO_URL: &str = "https://github.com/alibaba/MNN.git";
+static MNN_REPO_URL: &str = "https://github.com/IuvenisSapiens/MNN.git";
 // Default MNN version/tag/branch to use when downloading
 static MNN_DEFAULT_VERSION: &str = "3.1.2";
 
@@ -241,7 +241,7 @@ fn ensure_vendor_exists(vendor: impl AsRef<Path>) -> Result<()> {
 
         // Download URL for the zip archive
         let download_url = format!(
-            "https://github.com/alibaba/MNN/archive/refs/tags/{}.zip",
+            "https://github.com/IuvenisSapiens/MNN/archive/refs/tags/{}.zip",
             known_working_version // Use the known working version
         );
         println!("cargo:warning=Downloading MNN from {}", download_url);
