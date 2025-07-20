@@ -130,7 +130,7 @@ impl MnnCallsite {
     }
 }
 
-#[no_mangle]
+#[unsafe(no_mangle)]
 extern "C" fn mnn_ffi_emit(
     file: *const c_char,
     line: libc::size_t,
