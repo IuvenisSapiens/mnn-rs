@@ -1,14 +1,14 @@
 [package]
 name = "mnn-bridge"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 license = { workspace = true }
 
 [dependencies]
 error-stack = "0.5.0"
 mnn = { workspace = true }
-ndarray = { version = "0.16", optional = true }
-ndarray_0_15 = { package = "ndarray", version = "0.15", optional = true }
+ndarray = { version = "0.16.1", optional = true }
+ndarray_0_15 = { package = "ndarray", version = "0.16.1", optional = true }
 # opencv = { version = "0.92.3", default-features = false, optional = true }
 
 [features]
